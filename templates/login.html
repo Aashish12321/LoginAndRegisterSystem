@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+{% block title %} Login {% endblock title %} 
+{% block body %}
+
+<div class="container">
+    <h1>Login Here</h1>
+    <form action="/login" method="POST">
+      <div class="mb-3">
+        <label for="Username" class="form-label" style="color: rgb(0, 255, 26)">Username</label>
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        <!-- <input type="text" class="form-control" name="Username" id="Username" /> -->
+      </div>
+
+      <div class="mb-3">
+        <label for="Password" class="form-label" style="color: rgb(0, 255, 26)">Password</label>
+        {{ form.password }}
+        <!-- <input type="password" class="form-control" name="Password" id="Password" placeholder="Password"/> -->
+      </div>
+
+
+      <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+      {{ form.submit }}
+      
+
+    </form>
+</div>
+
+
+{% endblock body %}
